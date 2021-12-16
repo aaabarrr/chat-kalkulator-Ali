@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALI AKBAR</title>
+
+   
+</head>
+<body>
+    <fieldset >
+        <legend>Kurs rupiah-Mata uang asing</legend>
+        <form action="">
+            <table border="5">
+                <tr>
+                    <td id="nilai">
+                        Masukan Nilai <br><input type="text" value="" id="input" onchange="hitung()">
+                    </td>
+                    <td id="valas">
+                        Valas <br> <select name=""  id="pilih" onchange="hitung()">
+                            <option value="satu">Dolar As</option>
+                            <option value="dua">Dolar Singapura</option>
+                            <option value="tiga">Ringgit Malaysia</option>
+                            <option value="empat">Yan Jepang</option>
+                            <option value="lima">Euro</option>
+                            <option value="enam">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td>
+                        Nilai rupiah <br> <input type="number" value="" id="hasil" onchange="hitung()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    
+
+    <script>
+        function hitung(){
+            let input, pilih 
+            input = document.getElementById("input").value;
+            pilih = document.getElementById("pilih").value;
+            
+
+        if (pilih == "satu"){
+            let dolar_us =9.915;
+            hasil = input*dolar_us;
+        }else if (pilih == "dua") {
+            let dolar_singapura =13.472;
+            hasil = input*dolar_singapura;
+        }else if (pilih =="tiga"){
+            let ringgit_malaysia =874;
+            hasil = input*ringgit_malaysia;
+        }else if(pilih=="empat"){
+            let yen =120;
+            hasil = input*yen;
+        }
+        else if(pilih=="lima"){
+            let euro=15.888
+            hasil=input*euro
+        }else{
+            let riyal=3.592
+            hasil=input*riyal
+        }
+
+        document.getElementById("hasil").value=hasil;
+        }
+    </script>
+</body>
+</html>

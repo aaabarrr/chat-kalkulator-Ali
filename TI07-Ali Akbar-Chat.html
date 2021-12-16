@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALI AKBAR</title>
+</head>
+    <style>
+        .table{
+            width: 30em;
+            height: 30em;
+            border-style: solid; 
+        }
+        .table .input{
+            display: flex;
+            margin-top: 28.6em;
+        }
+    </style>
+<body>
+    <div class="table"></div>
+    <div>
+            <input type="text" class="input">
+            <button class="kirim">kirim</button>
+    </div>
+    <script>
+        let table=document.querySelector(".table");
+        const terima=document.querySelector(".input");
+        const kirim=document.querySelector(".kirim");
+
+        kirim.addEventListener("click",function(){
+            table.innerHTML=table.innerHTML+"<br>"+ terima.value;
+            terima.value="";
+        })
+    </script>
+</body>
+</html>
